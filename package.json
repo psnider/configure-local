@@ -1,0 +1,29 @@
+{
+  "name": "configure-local",
+  "version": "1.0.0",
+  "description": "Manage node.js instance environment configuration.",
+  "main": "configure.js",
+  "scripts": {
+    "build": "tsc --project .",
+    "clean": "rm -f configure.js configure.tests.js",
+    "test": "mocha ./configure.tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:psnider/configure.git"
+  },
+  "author": "Peter Snider",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "nconf": "^0.8.4",
+    "turf": "^3.0.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.0"
+  },
+  "typings": "./configure.d.ts"
+}

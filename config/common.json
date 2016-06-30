@@ -1,0 +1,6 @@
+{
+    "external_service": {
+        "api_key": "0a1b2c3d",
+        "url": "https://external_service.co/api/v1/"
+    }
+}
