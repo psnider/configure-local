@@ -27,9 +27,9 @@
         "placeOpenBraceOnNewLineForControlBlocks": false
     },
     "files": [
-        "configure.ts",
-        "configure.tests.ts",
-        "configure.d.ts",
+        "configure-local.ts",
+        "configure-local.tests.ts",
+        "configure-local.d.ts",
         "typings/index.d.ts"
     ]
 }

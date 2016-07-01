@@ -15,7 +15,7 @@ This module wraps [**nconf**](), and provides a fixed policy of:
   Configuration settings in the common configuration file are used when none of the other sources specify a setting.
 
 ## Examples
-See the [tests](./configure.tests.ts)
+See the [tests](./configure-local.tests.ts)
 
 ## Usage
 
