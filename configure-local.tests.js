@@ -24,7 +24,7 @@ describe('configure-local', function () {
             it('should respect setting specified only in config/development.json', function () {
                 expect(configure.get('PORT')).to.equal(1001);
             });
-            it('should respect override setting in config/common.json with one from config/development.json', function () {
+            it('should override setting in config/common.json with one from config/development.json', function () {
                 expect(configure.get('external_service:url')).to.equal('https://external_service.co/api/v2/');
             });
         });
