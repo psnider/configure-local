@@ -1,6 +1,6 @@
 "use strict";
-var CHAI = require('chai');
-var expect = CHAI.expect;
+const CHAI = require('chai');
+const expect = CHAI.expect;
 describe('configure-local', function () {
     process.env.NODE_ENV = 'development';
     var configure = require('configure-local');
@@ -30,13 +30,13 @@ describe('configure-local', function () {
         });
         describe('using environment variables', function () {
             it('should override a setting in config/common.json', function () {
-                scopeEnvVars({ NODE_ENV: 'development', 'external_service:api_key': 'key_for_testing' }, function () {
+                scopeEnvVars({ NODE_ENV: 'development', 'external_service:api_key': 'key_for_testing' }, () => {
                     configure.test.reset();
                     expect(configure.get('external_service:api_key')).to.equal('key_for_testing');
                 });
             });
             it('should override a setting in config/development.json', function () {
-                scopeEnvVars({ NODE_ENV: 'development', PORT: '3333' }, function () {
+                scopeEnvVars({ NODE_ENV: 'development', PORT: '3333' }, () => {
                     configure.test.reset();
                     expect(configure.get('PORT')).to.equal('3333');
                 });
@@ -50,7 +50,7 @@ describe('configure-local', function () {
                 });
             });
             it('should override a setting in environment variables', function () {
-                scopeEnvVars({ NODE_ENV: 'development', PORT: '3333' }, function () {
+                scopeEnvVars({ NODE_ENV: 'development', PORT: '3333' }, () => {
                     scopeArgs(['--PORT', '8888'], function () {
                         configure.test.reset();
                         expect(configure.get('PORT')).to.equal(8888);
@@ -91,7 +91,7 @@ describe('configure-local', function () {
             process.env.NODE_ENV = saved;
         });
         it('should select production when NODE_ENV=production', function () {
-            scopeEnvVars({ NODE_ENV: 'production' }, function () {
+            scopeEnvVars({ NODE_ENV: 'production' }, () => {
                 configure.test.reset();
                 expect(configure.get('PORT')).to.equal(2002);
             });

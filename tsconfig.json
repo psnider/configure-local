@@ -1,13 +1,14 @@
 {
-    "version": "1.8.0",
+    "version": "2.0.10",
     "compilerOptions": {
-        "target": "es5",
+        "target": "es6",
         "module": "commonjs",
         "declaration": false,
         "noImplicitAny": false,
         "removeComments": false,
         "noLib": false,
-        "outDir": "."
+        "outDir": ".",
+        "types": ["chai", "mocha", "nconf", "node"]
     },
     "scripts": {
         "postbuild": "echo after building"
@@ -29,7 +30,6 @@
     "files": [
         "configure-local.ts",
         "configure-local.tests.ts",
-        "configure-local.d.ts",
-        "typings/index.d.ts"
+        "configure-local.d.ts"
     ]
 }

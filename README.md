@@ -1,6 +1,10 @@
 # configure-local
+
+- TypeScript 2.0 targeting es6
+- Node.js 6
+
 ## Summary
-This module wraps [**nconf**](), and provides a fixed policy of:  
+This module wraps [**nconf**](https://github.com/indexzero/nconf), and provides a fixed policy of:  
 - Use project local configuration files, in the ./config directory, to configure a node instance.
 - The configuration files match the name of the instance environment specified by the NODE_ENV environment variable.
 - Shared configuration is in common.json.
@@ -29,7 +33,7 @@ You would then have these files:
 
 To configure a module:
 ```
-configure = require('configure-local')
+configure = require('@sabbatical/configure-local')
 ```
 The configuration is loaded the first time *configure-local* is *require*'d.
 
@@ -69,4 +73,4 @@ npm run test
 ```
 
 ## Problems?
-Please report them as issues on the GitHub repo.
+Please report them as issues on the [GitHub repo](https://github.com/psnider/configure-local).

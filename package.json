@@ -1,8 +1,8 @@
 {
-  "name": "configure-local",
-  "version": "1.0.1",
+  "name": "@sabbatical/configure-local",
+  "version": "1.0.2",
   "description": "Manage node.js instance environment configuration.",
-  "main": "configure-local.js",
+  "main": "./configure-local.js",
   "scripts": {
     "build": "tsc --project .",
     "clean": "rm -f configure-local.js configure-local.tests.js",
@@ -15,13 +15,15 @@
   "author": "Peter Snider",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "6.0.51",
     "nconf": "0.8.4"
   },
   "devDependencies": {
+    "@types/chai": "3.4.34",
+    "@types/mocha": "2.2.33",
     "chai": "3.5.0",
     "mocha": "3.1.2",
-    "typescript": "2.0.6",
-    "typings": "1.5.0"
+    "typescript": "2.0.10"
   },
   "typings": "./configure-local.d.ts"
 }
