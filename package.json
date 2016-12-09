@@ -1,6 +1,6 @@
 {
   "name": "@sabbatical/configure-local",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Manage node.js instance environment configuration.",
   "main": "./configure-local.js",
   "scripts": {

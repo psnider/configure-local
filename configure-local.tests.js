@@ -4,16 +4,16 @@ const expect = CHAI.expect;
 describe('configure-local', function () {
     process.env.NODE_ENV = 'development';
     var configure = require('configure-local');
-    function scopeEnvVars(env, wrapped) {
+    function scopeEnvVars(env, test) {
         var saved = process.env;
         process.env = env;
-        wrapped();
+        test();
         process.env = saved;
     }
-    function scopeArgs(args, wrapped) {
+    function scopeArgs(args, test) {
         var saved = process.argv;
         process.argv = args.concat(args);
-        wrapped();
+        test();
         process.argv = saved;
     }
     describe('settings and overrides', function () {

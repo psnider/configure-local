@@ -39,7 +39,7 @@ function get(...args: any[]) {
 }
 
 
-function reset(done) {
+function reset(done: (error?: Error) => void) {
     conf.reset(done)
     configure()
 }
