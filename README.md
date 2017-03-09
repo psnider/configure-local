@@ -41,7 +41,7 @@ The configuration is loaded the first time *configure-local* is *require*'d.
 To get the values of configuration parameters, use get() as in [**nconf**](https://github.com/indexzero/nconf):
 ```
 configure.get()   // returns the entire configuration
-configure.get('a:b')  // returns the value or object at that would be accessed by ['a']['b']
+configure.get('a:b')  // returns the value or object that would be accessed by ['a']['b']
 ```
 
 To reload the configuration:

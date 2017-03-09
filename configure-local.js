@@ -1,7 +1,7 @@
 "use strict";
-const fs = require('fs');
-const PATH = require('path');
-const nconf = require('nconf');
+const fs = require("fs");
+const PATH = require("path");
+const nconf = require("nconf");
 var conf;
 function reloadConfig() {
     const config_dir = conf.get('CONFIG_DIR');

@@ -1,5 +1,6 @@
 "use strict";
-const CHAI = require('chai');
+Object.defineProperty(exports, "__esModule", { value: true });
+const CHAI = require("chai");
 const expect = CHAI.expect;
 describe('configure-local', function () {
     process.env.NODE_ENV = 'development';
